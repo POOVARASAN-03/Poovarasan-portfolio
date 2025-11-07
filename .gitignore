@@ -1,0 +1,31 @@
+# 🔒 Environment variables
+.env
+.env.local
+.env.*.local
+
+# 🧱 Dependencies
+node_modules/
+
+# 🏗️ Build output
+dist/
+build/
+
+# 🖼️ System and editor files
+.DS_Store
+Thumbs.db
+
+# 🧰 IDE / Editor settings
+.vscode/
+.idea/
+*.log
+
+# 🚫 OS-specific
+*.swp
+*.swo
+
+# 🧪 Test coverage
+coverage/
+
+# 🧠 Optional (if using Yarn or pnpm)
+.yarn/
+.pnp.*
