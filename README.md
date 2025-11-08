@@ -1,16 +1,50 @@
-# React + Vite
+# 🌐 Poovarasan's Portfolio Website  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal **Portfolio Website**, built to showcase my skills, projects, and achievements as a **Computer Science Engineering (AI & ML)** student and aspiring **AI/ML Specialist & Web Developer**.  
 
-Currently, two official plugins are available:
+🎯 Designed with a clean, responsive interface to highlight my journey, technical expertise, and professional goals.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Demo  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+👉 **Visit Here:** [https://poovarasan-portfolio-ruby.vercel.app/](https://poovarasan-portfolio-ruby.vercel.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features  
+
+- 💼 **About Me Section** – Quick overview of my background, education, and interests.  
+- 💻 **Projects Showcase** – Highlights of my AI/ML and Web Development projects with descriptions and links.  
+- 🧠 **Skills Section** – Categorized display of my technical stack and tools.  
+- 📞 **Contact Form** – Easy way for recruiters or collaborators to reach me.  
+- 📱 **Responsive Design** – Fully optimized for desktop, tablet, and mobile users.  
+- 🌙 **Modern UI/UX** – Smooth animations, elegant color palette, and user-friendly layout.  
+
+---
+
+## 🧠 Tech Stack  
+
+- **Frontend:** React.js, Tailwind CSS  
+- **Framework/Tools:** Vite
+- **Deployment:** Vercel  
+- **Version Control:** Git & GitHub  
+
+---
+
+## 🛠️ Installation & Setup  
+
+If you want to run this portfolio locally:  
+
+```bash
+# Clone this repository
+git clone https://github.com/<your-github-username>/portfolio-website.git
+
+# Navigate into the folder
+cd portfolio-website
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
