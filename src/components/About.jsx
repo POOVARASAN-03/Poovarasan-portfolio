@@ -68,7 +68,7 @@ function About() {
                       Specializing in artificial intelligence, machine learning, and web development technologies.
                     </p>
                     <p className="text-sm font-medium text-foreground">
-                      CGPA: <span className="text-blue-600">8.73</span>
+                      CGPA: <span className="text-blue-600">8.66</span>
                     </p>
                   </div>
               </div>
