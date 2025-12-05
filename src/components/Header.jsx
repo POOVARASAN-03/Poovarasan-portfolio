@@ -15,14 +15,17 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState("home");
   const [darkMode, setDarkMode] = useState(false);
 
-  // Initialize dark mode from localStorage or system preference
+  // Initialize dark mode from localStorage only (default to light mode)
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     
-    if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+    if (savedTheme === "dark") {
       setDarkMode(true);
       document.documentElement.classList.add("dark");
+    } else {
+      // Ensure light mode is set by default
+      setDarkMode(false);
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 
