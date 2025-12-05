@@ -93,9 +93,6 @@ export default function Footer() {
         <div className="py-5 border-t border-gray-200 dark:border-gray-700 flex flex-col sm:flex-row items-center justify-center gap-2 text-sm text-gray-600 dark:text-gray-400">
           <p>© {currentYear} Poovarasan G. All rights reserved.</p>
           <span className="hidden sm:inline">•</span>
-          <p className="flex items-center gap-1">
-            Made with <Heart className="h-3.5 w-3.5 text-red-500 fill-red-500" /> in India
-          </p>
         </div>
       </div>
     </footer>
