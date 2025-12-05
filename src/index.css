@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Dark mode - use selector strategy with .dark class */
+@variant dark (&:where(.dark, .dark *));
+
 /* ✅ Base Design Tokens */
 @layer base {
   :root {

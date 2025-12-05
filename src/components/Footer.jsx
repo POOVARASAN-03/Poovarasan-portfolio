@@ -1,10 +1,12 @@
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
+import { Github, Linkedin, Heart } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const navLinks = [
+    { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
@@ -25,32 +27,36 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-100 border-t">
-      <div className="max-w-6xl mx-auto px-6 md:px-10">
+    <footer className="bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 border-t border-gray-200 dark:border-gray-700">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Section */}
-        <div className="py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="py-10 md:py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
 
           {/* Brand */}
-          <div>
-            <h3 className="text-xl font-bold text-gray-900">Poovarasan G</h3>
-            <p className="text-sm text-gray-600 mt-2">
-              Software Developer building clean and efficient web experiences.
+          <div className="text-center sm:text-left">
+            <h3 className="text-xl font-bold">
+              <span className="text-blue-600">{'<'}</span>
+              <span className="text-gray-900 dark:!text-white">Poovarasan G</span>
+              <span className="text-blue-600">{'/>'}</span>
+            </h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-3 max-w-xs mx-auto sm:mx-0">
+              Software Developer building clean and efficient web experiences with modern technologies.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="text-sm font-semibold text-gray-800 uppercase tracking-wider mb-3">
+          <div className="text-center sm:text-left">
+            <h4 className="text-sm font-semibold text-gray-800 dark:text-gray-200 uppercase tracking-wider mb-4">
               Quick Links
             </h4>
-            <nav className="flex flex-col space-y-2">
+            <nav className="flex flex-wrap justify-center sm:justify-start gap-x-4 gap-y-2">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-sm text-gray-600 hover:text-gray-900 transition"
+                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   {link.name}
                 </a>
@@ -59,11 +65,11 @@ export default function Footer() {
           </div>
 
           {/* Social */}
-          <div>
-            <h4 className="text-sm font-semibold text-gray-800 uppercase tracking-wider mb-3">
+          <div className="text-center sm:text-left lg:text-right">
+            <h4 className="text-sm font-semibold text-gray-800 dark:text-gray-200 uppercase tracking-wider mb-4">
               Connect
             </h4>
-            <div className="flex gap-3">
+            <div className="flex gap-3 justify-center sm:justify-start lg:justify-end">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 return (
@@ -72,13 +78,10 @@ export default function Footer() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-md border hover:bg-gray-200 transition"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      console.log(`${social.name} clicked`);
-                    }}
+                    className="p-2.5 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-gray-700 hover:-translate-y-1 transition-all shadow-sm"
+                    aria-label={social.name}
                   >
-                    <Icon className="h-4 w-4 text-gray-600" />
+                    <Icon className="h-4 w-4 text-gray-700 dark:text-gray-300" />
                   </a>
                 );
               })}
@@ -87,8 +90,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="py-6 border-t flex flex-col md:flex-row items-center justify-center text-sm text-gray-600 gap-2 ">
+        <div className="py-5 border-t border-gray-200 dark:border-gray-700 flex flex-col sm:flex-row items-center justify-center gap-2 text-sm text-gray-600 dark:text-gray-400">
           <p>© {currentYear} Poovarasan G. All rights reserved.</p>
+          <span className="hidden sm:inline">•</span>
+          <p className="flex items-center gap-1">
+            Made with <Heart className="h-3.5 w-3.5 text-red-500 fill-red-500" /> in India
+          </p>
         </div>
       </div>
     </footer>

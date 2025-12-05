@@ -36,52 +36,52 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100">
+    <section id="projects" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+        <div className="text-center mb-10 md:mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             Featured Projects
           </h2>
-          <div className="w-16 h-1 bg-blue-600 rounded-full mx-auto mt-2"></div>
-          <p className="mt-4 text-gray-600 text-lg">
+          <div className="w-16 h-1 bg-blue-600 rounded-full mx-auto mt-3"></div>
+          <p className="mt-4 text-gray-600 dark:text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
             Here are some of my recent projects showing my skills & experience
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Projects Grid - Responsive */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white rounded-lg border shadow-sm hover:shadow-xl hover:-translate-y-2 transition p-0 overflow-hidden"
+              className="group bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
             >
               {/* Image */}
-              <div className="aspect-video overflow-hidden  pt-1">
+              <div className="aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
               {/* Content */}
-              <div className="p-6 space-y-4">
-                <h3 className="text-xl font-semibold text-gray-900">
+              <div className="p-5 sm:p-6 space-y-4">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {project.title}
                 </h3>
 
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-3">
                   {project.description}
                 </p>
 
                 {/* Tech Badges */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="text-xs bg-gray-200 px-2 py-1 rounded-md text-gray-700"
+                      className="text-xs bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-2.5 py-1 rounded-full font-medium"
                     >
                       {tech}
                     </span>
@@ -95,18 +95,20 @@ export default function Projects() {
                   <a
                     href={project.liveLink}
                     target="_blank"
-                    className="flex-1 flex items-center justify-center gap-2 bg-blue-600 text-white text-sm py-2 rounded-md hover:bg-blue-700 transition"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 bg-blue-600 text-white text-sm py-2.5 rounded-lg hover:bg-blue-700 transition-colors font-medium"
                   >
-                    <ExternalLink size={16} /> Live Demo
+                    <ExternalLink size={15} /> Live Demo
                   </a>
 
                   {/* GitHub Button */}
                   <a
                     href={project.githubLink}
                     target="_blank"
-                    className="flex-1 flex items-center justify-center gap-2 border text-sm border-gray-300 py-2 rounded-md hover:bg-gray-100 transition"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 border-2 border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm py-2.5 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-500 transition-all font-medium"
                   >
-                    <Github size={16} /> GitHub
+                    <Github size={15} /> GitHub
                   </a>
                 </div>
 
@@ -114,12 +116,19 @@ export default function Projects() {
             </div>
           ))}
         </div>
-        <a href="https://github.com/POOVARASAN-03"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center mx-auto mt-10 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition w-fit">
-          See More →
-        </a>
+        
+        {/* See More Button */}
+        <div className="flex justify-center mt-10 md:mt-12">
+          <a 
+            href="https://github.com/POOVARASAN-03"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 bg-white dark:bg-gray-800 border-2 border-blue-600 text-blue-600 dark:text-blue-400 px-6 sm:px-8 py-3 rounded-full hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white transition-all duration-300 font-medium shadow-sm hover:shadow-lg"
+          >
+            See More Projects
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
       </div>
     </section>
   );
