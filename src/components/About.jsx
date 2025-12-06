@@ -70,7 +70,7 @@ function About() {
               <div className="space-y-4">
                 <div className="border-l-3 border-blue-500 pl-4 py-2 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 transition-colors rounded-r-lg" data-testid="card-education-1">
                   <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-medium">
-                    2022 - <span className="text-blue-600 dark:text-blue-400">Present</span>
+                    2022 - 2026 <span className="text-blue-600 dark:text-blue-400">Present</span>
                   </p>
                   <h4 className="text-sm sm:text-base font-semibold text-gray-900 dark:text-white mt-1">Easwari Engineering College</h4>
                   <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1">
