@@ -30,7 +30,7 @@ const projects = [
   image: "/images/medication.png",
   technologies: ["MERN", "Text Recognition", "Python", "OCR", "AI-Chatbot"],
   liveLink: "https://ai-medicationremainder-gasx.onrender.com/",
-  githubLink: "https://github.com/POOVARASAN-03/RAG-Document-Reader",
+  githubLink: "https://github.com/POOVARASAN-03/AI-Medication-Remainder",
 },
   {
   id: 4,
