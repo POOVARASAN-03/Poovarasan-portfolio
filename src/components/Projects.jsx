@@ -22,8 +22,18 @@ const projects = [
   liveLink: "https://hybrid-ats-mern-app.onrender.com",
   githubLink: "https://github.com/POOVARASAN-03/HYBRID-ATS-MERN-APP",
 },
-{
+  {
   id: 3,
+  title: "AI-Medication-Reminder",
+  description:
+    "An AI-powered medication reminder application that uses natural language processing to set and manage medication schedules through prescription image analysis.",
+  image: "/images/medication.png",
+  technologies: ["MERN", "Text Recognition", "Python", "OCR", "AI-Chatbot"],
+  liveLink: "https://ai-medicationremainder-gasx.onrender.com/",
+  githubLink: "https://github.com/POOVARASAN-03/RAG-Document-Reader",
+},
+  {
+  id: 4,
   title: "RAG Document Reader",
   description:
     "Built a Retrieval-Augmented Generation (RAG) application using LangChain and FAISS to process and answer queries from uploaded documents with contextual accuracy.",
@@ -31,15 +41,6 @@ const projects = [
   technologies: ["LangChain", "FAISS", "Python", "LLMs"],
   liveLink: "https://rag-multi-doc-reader.streamlit.app/",
   githubLink: "https://github.com/POOVARASAN-03/RAG-Document-Reader",
-},
-{
-  id: 4,
-  title: "AI-Medication-Reminder",
-  description:
-    "An AI-powered medication reminder application that uses natural language processing to set and manage medication schedules through prescription image analysis.",
-  image: "/images/medication.png",
-  technologies: ["MERN", "Text Recognition", "Python", "OCR"],
-  liveLink: "https://ai-medicationremainder-gasx.onrender.com/",
 }
 ];
 
@@ -64,7 +65,7 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+              className="group bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden h-full flex flex-col"
             >
               {/* Image */}
               <div className="aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
@@ -76,7 +77,7 @@ export default function Projects() {
               </div>
 
               {/* Content */}
-              <div className="p-5 sm:p-6 space-y-4">
+              <div className="p-5 sm:p-6 space-y-4 flex-grow flex flex-col">
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {project.title}
                 </h3>
@@ -86,11 +87,11 @@ export default function Projects() {
                 </p>
 
                 {/* Tech Badges */}
-                <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 min-h-[60px]">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="text-xs bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-2.5 py-1 rounded-full font-medium"
+                      className="text-xs bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-2.5 py-1 rounded-full font-medium h-fit"
                     >
                       {tech}
                     </span>
@@ -98,7 +99,7 @@ export default function Projects() {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex gap-3 pt-2">
+                <div className="flex gap-3 pt-2 mt-auto">
 
                   {/* Live Button */}
                   <a
