@@ -32,6 +32,15 @@ const projects = [
   liveLink: "https://rag-multi-doc-reader.streamlit.app/",
   githubLink: "https://github.com/POOVARASAN-03/RAG-Document-Reader",
 },
+{
+  id: 4,
+  title: "AI-Medication-Reminder",
+  description:
+    "An AI-powered medication reminder application that uses natural language processing to set and manage medication schedules through prescription image analysis.",
+  image: "/images/medication.png",
+  technologies: ["MERN", "Text Recognition", "Python", "OCR"],
+  liveLink: "https://ai-medicationremainder-gasx.onrender.com/",
+}
 ];
 
 export default function Projects() {
