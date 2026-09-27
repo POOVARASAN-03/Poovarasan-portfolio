@@ -19,7 +19,7 @@ export default function Hero() {
       id="home"
       className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:pt-28 md:pb-16 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800"
     >
-      <div className="max-w-6xl mx-auto w-full">
+      <div className="max-w-6xl mx-auto w-full">  
         <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           
           {/* Image first on mobile, right on desktop */}
@@ -46,17 +46,15 @@ export default function Hero() {
                 Poovarasan G
               </h1>
               <h2 className="text-lg sm:text-xl md:text-2xl font-medium text-gray-700 dark:text-gray-300">
-                <span className="text-blue-600 dark:text-blue-400">Aspiring Software Developer</span>
+                <span className="text-blue-600 dark:text-blue-400">Software Engineer</span>
                 <span className="hidden sm:inline"> | </span>
                 <br className="sm:hidden" />
-                <span>AI & ML Enthusiast</span>
+                <span>Java Backend & SAP Commerce Cloud</span>
               </h2>
             </div>
             
             <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg mx-auto md:mx-0">
-              I'm a final-year Computer Science Engineering student passionate about building web applications 
-              using the <span className="font-medium text-gray-800 dark:text-gray-200">MERN stack</span> and exploring the exciting world of 
-              <span className="font-medium text-gray-800 dark:text-gray-200"> artificial intelligence</span> and <span className="font-medium text-gray-800 dark:text-gray-200">machine learning</span>.
+              I'm a Computer Science Engineering graduate currently working as a <span className="font-medium text-gray-800 dark:text-gray-200">Software Engineer</span>, specializing in <span className="font-medium text-gray-800 dark:text-gray-200">Java backend development</span> and <span className="font-medium text-gray-800 dark:text-gray-200">SAP Commerce Cloud</span>. I’m passionate about building scalable and reliable applications while continuously exploring the exciting world of <span className="font-medium text-gray-800 dark:text-gray-200">Artificial Intelligence</span> and <span className="font-medium text-gray-800 dark:text-gray-200">Machine Learning</span>.
             </p>
             
             {/* Buttons */}
